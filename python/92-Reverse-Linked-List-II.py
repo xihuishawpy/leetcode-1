@@ -6,13 +6,13 @@ class Solution:
 
         # 1) reach node at position "left"
         leftPrev, cur = dummy, head
-        for i in range(left - 1):
+        for _ in range(left - 1):
             leftPrev, cur = cur, cur.next
 
         # Now cur="left", leftPrev="node before left"
         # 2) reverse from left to right
         prev = None
-        for i in range(right - left + 1):
+        for _ in range(right - left + 1):
             tmpNext = cur.next
             cur.next = prev
             prev, cur = cur, tmpNext

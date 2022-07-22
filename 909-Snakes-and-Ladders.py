@@ -9,7 +9,7 @@ class Solution:
                 c = length - 1 - c
             return [r, c]
 
-        q = deque() 
+        q = deque()
         q.append([1, 0]) # [square, moves]
         visit = set()
         while q:
@@ -19,7 +19,7 @@ class Solution:
                 r, c = intToPos(nextSquare)
                 if board[r][c] != -1:
                     nextSquare = board[r][c]
-                if nextSquare == length * length:
+                if nextSquare == length**2:
                     return moves + 1
                 if nextSquare not in visit:
                     visit.add(nextSquare)

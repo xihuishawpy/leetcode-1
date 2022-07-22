@@ -31,5 +31,5 @@ class WordDictionary:
                         return False
                     cur = cur.children[c]
             return cur.word
-        
+
         return dfs(0, self.root)

@@ -11,10 +11,8 @@ class Solution:
 
             if not maxHeap:
                 time = q[0][1]
-            else:
-                cnt = 1 + heapq.heappop(maxHeap)
-                if cnt:
-                    q.append([cnt, time + n])
+            elif cnt := 1 + heapq.heappop(maxHeap):
+                q.append([cnt, time + n])
             if q and q[0][1] == time:
                 heapq.heappush(maxHeap, q.popleft()[0])
         return time

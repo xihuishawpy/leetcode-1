@@ -7,18 +7,3 @@ class Solution:
             for n in nums:
                 cache[total] += cache.get(total - n, 0)
         return cache[target]
-
-        def dfs(total):
-            if total == target:
-                return 1
-            if total > target:
-                return 0
-            if total in cache:
-                return cache[total]
-
-            cache[total] = 0
-            for n in nums:
-                cache[total] += dfs(total + n)
-            return cache[total]
-
-        return dfs(0)

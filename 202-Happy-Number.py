@@ -1,13 +1,13 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
         slow, fast = n, self.sumSquareDigits(n)
-        
+
         while slow != fast:
             fast = self.sumSquareDigits(fast)
             fast = self.sumSquareDigits(fast)
             slow = self.sumSquareDigits(slow)
 
-        return True if fast == 1 else False
+        return fast == 1
             
     def sumSquareDigits(self, n):
         output = 0

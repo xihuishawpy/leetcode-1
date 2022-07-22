@@ -1,6 +1,6 @@
 class Solution:
     def count_components(self, n: int, edges: List[List[int]]) -> int:
-        parent = [i for i in range(n)]
+        parent = list(range(n))
         rank = [1] * n
 
         def find_union(node: int) -> None:

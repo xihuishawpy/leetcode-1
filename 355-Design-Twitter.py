@@ -12,7 +12,7 @@ class Twitter:
     def getNewsFeed(self, userId: int) -> List[int]:
         res = []
         minHeap = [] 
-        
+
         self.followMap[userId].add(userId)
         for followeeId in self.followMap[userId]:
             if followeeId in self.tweetMap:

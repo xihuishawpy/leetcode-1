@@ -12,7 +12,7 @@ class Solution:
             else:
                 break
 
-        if not (top <= bot):
+        if top > bot:
             return False
 
         l, r = 0, COLS - 1

@@ -4,10 +4,7 @@ class Solution:
     @return: encodes a list of strings to a single string.
     """
     def encode(self, strs):
-        res = ""
-        for s in strs:
-            res += str(len(s)) + "#" + s
-        return res
+        return "".join(f"{len(s)}#{s}" for s in strs)
 
     """
     @param: str: A string

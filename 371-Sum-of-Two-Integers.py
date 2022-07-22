@@ -1,9 +1,7 @@
 class Solution:
     def getSum(self, a: int, b: int) -> int:
         def add(a, b): 
-            if not a or not b:
-                return a or b
-            return add(a^b, (a&b) << 1)
+            return a or b if not a or not b else add(a^b, (a&b) << 1)
 
         if a*b < 0: # assume a < 0, b > 0
             if a > 0:

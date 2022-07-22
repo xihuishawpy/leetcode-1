@@ -6,9 +6,7 @@ class Solution:
         while l <= r:
             m = (l + r) // 2
 
-            totalTime = 0
-            for p in piles:
-                totalTime += ((p - 1) // m) + 1
+            totalTime = sum(((p - 1) // m) + 1 for p in piles)
             if totalTime <= H:
                 k = m
                 r = m - 1

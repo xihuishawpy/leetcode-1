@@ -16,4 +16,4 @@ class Solution:
         dsu = UnionFind()
         for a,b in edges:
             dsu.union(a,b)
-        return len(set(dsu.findParent(x) for x in range(n)))
+        return len({dsu.findParent(x) for x in range(n)})

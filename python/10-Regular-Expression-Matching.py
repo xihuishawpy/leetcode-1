@@ -1,7 +1,7 @@
 # BOTTOM-UP Dynamic Programming
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        cache = [[False] * (len(p) + 1) for i in range(len(s) + 1)]
+        cache = [[False] * (len(p) + 1) for _ in range(len(s) + 1)]
         cache[len(s)][len(p)] = True
 
         for i in range(len(s), -1, -1):

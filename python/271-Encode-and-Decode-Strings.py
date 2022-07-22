@@ -5,10 +5,7 @@ class Solution:
     """
 
     def encode(self, strs):
-        res = ""
-        for s in strs:
-            res += str(len(s)) + "#" + s
-        return res
+        return "".join(f"{len(s)}#{s}" for s in strs)
 
     """
     @param: str: A string

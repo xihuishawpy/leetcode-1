@@ -11,8 +11,4 @@ class Solution:
             if stack[-1][1] == k:
                 stack.pop()
 
-        res = ""
-        for char, count in stack:
-            res += char * count
-
-        return res
+        return "".join(char * count for char, count in stack)
