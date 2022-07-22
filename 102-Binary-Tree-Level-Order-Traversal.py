@@ -10,11 +10,11 @@ class Solution:
         res = []
         q = collections.deque()
         if root: q.append(root)
-            
+
         while q:
             val = []
-            
-            for i in range(len(q)):
+
+            for _ in range(len(q)):
                 node = q.popleft()
                 val.append(node.val)
                 if node.left: q.append(node.left)

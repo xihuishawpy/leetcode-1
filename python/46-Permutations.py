@@ -6,7 +6,7 @@ class Solution:
         if len(nums) == 1:
             return [nums[:]]  # nums[:] is a deep copy
 
-        for i in range(len(nums)):
+        for _ in range(len(nums)):
             n = nums.pop(0)
             perms = self.permute(nums)
 

@@ -20,7 +20,7 @@ class Solution:
                 break
 
         l = r = idx
-        for i in range(k - 1):
+        for _ in range(k - 1):
             if l == 0:
                 r += 1
             elif r == len(arr) - 1 or x - arr[l - 1] <= arr[r + 1] - x:

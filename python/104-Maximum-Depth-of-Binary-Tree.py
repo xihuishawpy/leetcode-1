@@ -1,10 +1,11 @@
 # RECURSIVE DFS
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-
-        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        return (
+            1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+            if root
+            else 0
+        )
 
 
 # ITERATIVE DFS
@@ -33,7 +34,7 @@ class Solution:
         q = deque([root])
         while q:
 
-            for i in range(len(q)):
+            for _ in range(len(q)):
                 node = q.popleft()
                 if node.left:
                     q.append(node.left)

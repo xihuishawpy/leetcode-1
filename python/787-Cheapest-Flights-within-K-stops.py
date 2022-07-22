@@ -5,7 +5,7 @@ class Solution:
         prices = [float("inf")] * n
         prices[src] = 0
 
-        for i in range(k + 1):
+        for _ in range(k + 1):
             tmpPrices = prices.copy()
 
             for s, d, p in flights:  # s=source, d=dest, p=price

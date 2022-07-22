@@ -1,7 +1,7 @@
 class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
-        
+
         for char in s:
             if char is not "]":
                 stack.append(char)

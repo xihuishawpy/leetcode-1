@@ -3,7 +3,7 @@ class Solution:
         count = Counter(s) # Hashmap, count each char
         maxHeap = [[-cnt, char] for char, cnt in count.items()]
         heapq.heapify(maxHeap) # O(n)
-        
+
         prev = None
         res = ""
         while maxHeap or prev:
@@ -13,7 +13,7 @@ class Solution:
             cnt, char = heapq.heappop(maxHeap)
             res += char
             cnt += 1
-            
+
             if prev:
                 heapq.heappush(maxHeap, prev)
                 prev = None

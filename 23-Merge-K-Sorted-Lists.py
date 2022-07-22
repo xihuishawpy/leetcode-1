@@ -5,9 +5,9 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
-        if not lists or len(lists) == 0:
+        if not lists:
             return None
-        
+
         while len(lists) > 1:
             mergedLists = []
             for i in range(0, len(lists), 2):

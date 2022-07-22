@@ -6,7 +6,7 @@ class Solution:
         for j in range(length):
             c = S[j]
             count[c] = j
-        
+
         curLen = 0
         goal = 0
         while i < length:

@@ -13,9 +13,8 @@ class Solution:
             rightSide = None
             qLen = len(q)
 
-            for i in range(qLen):
-                node = q.popleft()
-                if node:
+            for _ in range(qLen):
+                if node := q.popleft():
                     rightSide = node
                     q.append(node.left)
                     q.append(node.right)

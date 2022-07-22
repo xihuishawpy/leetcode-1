@@ -3,7 +3,7 @@ class Solution:
         if len(s1) + len(s2) != len(s3):
             return False
 
-        dp = [[False] * (len(s2) + 1) for i in range(len(s1) + 1)]
+        dp = [[False] * (len(s2) + 1) for _ in range(len(s1) + 1)]
         dp[len(s1)][len(s2)] = True
 
         for i in range(len(s1), -1, -1):

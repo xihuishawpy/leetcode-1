@@ -7,7 +7,7 @@ class Solution:
 
         res = []
         heapq.heapify(pts)
-        for i in range(k):
+        for _ in range(k):
             dist, x, y = heapq.heappop(pts)
             res.append([x, y])
         return res

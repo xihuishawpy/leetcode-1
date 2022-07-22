@@ -7,19 +7,19 @@ class Solution:
         wordList.append(beginWord)
         for word in wordList:
             for j in range(len(word)):
-                pattern = word[:j] + "*" + word[j + 1 :]
+                pattern = f"{word[:j]}*{word[j + 1 :]}"
                 nei[pattern].append(word)
 
-        visit = set([beginWord])
+        visit = {beginWord}
         q = deque([beginWord])
         res = 1
         while q:
-            for i in range(len(q)):
+            for _ in range(len(q)):
                 word = q.popleft()
                 if word == endWord:
                     return res
                 for j in range(len(word)):
-                    pattern = word[:j] + "*" + word[j + 1 :]
+                    pattern = f"{word[:j]}*{word[j + 1 :]}"
                     for neiWord in nei[pattern]:
                         if neiWord not in visit:
                             visit.add(neiWord)

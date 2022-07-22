@@ -9,7 +9,7 @@ class Solution:
                 dist = abs(x1 - x2) + abs(y1 - y2)
                 adj[i].append([dist, j])
                 adj[j].append([dist, i])
-        
+
         # Prim's
         res = 0
         visit = set()

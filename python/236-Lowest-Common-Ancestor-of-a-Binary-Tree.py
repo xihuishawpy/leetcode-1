@@ -19,7 +19,7 @@ class Solution:
             if not root:
                 return False
             mid = left = right = False
-            if root.val == p.val or root.val == q.val:
+            if root.val in [p.val, q.val]:
                 mid = True
 
             left = search(root.left, p, q)
